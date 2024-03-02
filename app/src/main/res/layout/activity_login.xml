@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistema de Registro de Despesas"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="-20dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edt_usuario"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Usuário"
+        android:textColor="@color/white"
+        android:layout_marginTop="90dp"
+        />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        />
+
+    <CheckBox
+        android:id="@+id/ckbSenha"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/button"
+        android:text="Mostrar senha"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/button"
+        android:text="Login"
+        android:textColor="@color/background"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/button"
+        android:text="Registrar"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/background"
+        />
+</LinearLayout>

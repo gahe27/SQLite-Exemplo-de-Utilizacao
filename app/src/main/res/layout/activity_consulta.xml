@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ConsultaActivity">
+
+  <TextView
+      android:id="@+id/txtNome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="80dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="80dp"
+      android:text="Bem vindo, *nome do usuário*!"
+      android:textColor="@color/white"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.52"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="40dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="40dp"
+      android:text="Consultar Lançamentos"
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+  <EditText
+      android:id="@+id/edtDataDe"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="102dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="102dp"
+      android:ems="10"
+      android:hint="De aaaa-mm-dd"
+      android:inputType="date"
+      android:textColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+  <EditText
+      android:id="@+id/edtDataAte"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="101dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="101dp"
+      android:ems="10"
+      android:hint="Até aaaa-mm-dd"
+      android:inputType="date"
+      android:textColor="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtDataDe" />
+
+  <Button
+      android:id="@+id/btnConsultar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="145dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="145dp"
+      android:backgroundTint="@color/button"
+      android:text="Consultar"
+      android:textColor="@color/background"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/radioGroupConsulta" />
+
+  <ListView
+      android:id="@+id/lstConsulta"
+      android:layout_width="400dp"
+      android:layout_height="200dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnConsultar" />
+
+  <Button
+      android:id="@+id/btnSair"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:layout_marginEnd="60dp"
+      android:backgroundTint="@color/button"
+      android:text="Sair"
+      android:textColor="@color/background"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/lstConsulta" />
+
+  <Button
+      android:id="@+id/btnVoltar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="60dp"
+      android:layout_marginTop="2dp"
+      android:backgroundTint="@color/button"
+      android:text="Voltar"
+      android:textColor="@color/background"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/lstConsulta" />
+
+  <RadioGroup
+      android:id="@+id/radioGroupConsulta"
+      android:layout_width="400dp"
+      android:layout_height="150dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtDataAte">
+
+    <RadioButton
+        android:id="@+id/rbReceitaConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="150dp"
+        android:text="Receita"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rbDespesaConsulta"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="150dp"
+        android:text="Despesa"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rbTodos"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="150dp"
+        android:text="Todos"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+  </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

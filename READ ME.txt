@@ -1,0 +1,5 @@
+Definições do Layout;
+Definições da Tabela Usuário;
+Definição da Tabela Lançamento (receitas e despesas);
+Inicio da programação;
+Demais lógicas e melhorias na interface a fazer.
